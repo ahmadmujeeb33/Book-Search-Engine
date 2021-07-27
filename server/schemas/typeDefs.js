@@ -26,18 +26,16 @@ const typeDefs = gql`
     }
 
     input BookSearch {
-        bookId: String
-        title: String
+        bookId: String!
+        title: String!
         authors: [String]
-        description: String
+        description: String!
         image: String
-        bookLink: String
+        link: String
     }
 
     type Query {
         me: User
-        users: [User]
-        user(username: String!): User
     }
 
     type Mutation {
